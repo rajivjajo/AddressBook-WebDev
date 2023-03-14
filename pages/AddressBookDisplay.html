@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header class="header-content header">
+            <div class="logo-content">
+                <a href="AddressBookDisplay.html"><img src="../assets/images/address-book-logo.png" alt=""></a>
+                <div>
+                    <span class="ab-text">Address</span><br>
+                    <span class="ab-text address-book">Book</span><br>
+                </div>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="header-contents">
+                <div class="address-book-text">
+                    Person Details <div class="person-count"></div>
+                </div>
+                <a href="AddressBookForm.html" class="add-button">
+                    <!-- <img class="add-icon" src="../assets/icons/add-24px.svg" alt=""> -->
+                    Add Person
+                </a>
+            </div>
+            <div class="table-main">
+                <table id="display" class="table">
+                </table>
+            </div>
+        </div>
+        <script src="../js/app_home.js"></script>
+        <script src="../js/site_properties.js"></script>
+        <script src="../js/AddressBookObject.js"></script>
+        <script src="../js/AddressBook.js"></script>
+    </body>
+</html>

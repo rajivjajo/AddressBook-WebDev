@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header class="header-content header">
+            <div class="logo-content">
+                <a href="AddressBookDisplay.html"><img src="../assets/images/address-book-logo.png" alt=""></a>
+                <div>
+                    <span class="ab-text">Address</span><br>
+                    <span class="ab-text address-book">Book</span><br>
+                </div>
+            </div>
+        </header>
+        <div class="form-content">
+            <form class="form" action="#" onsubmit="save(event);" onreset="resetForm();">
+                <div class="form-head">
+                    Person Address Form
+                    <!-- <a href="AddressBookDisplay.html" class="cancel-button"> -->
+                        <img class="cancel-icon" src="../assets/icons/cancel.svg" alt="cancel" onclick="cancelForm();">
+                    <!-- </a> -->
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="name">Full Name</label>
+                    <input type="text" class="input" id="name" name="name" required>
+                    <error-output class="name-error" for="name"></error-output>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="phoneNo">Phone Number</label>
+                    <input type="tel" class="input" id="phoneNo" name="phoneNo" required>
+                    <error-output class="phone-error" for="phoneNo"></error-output>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="address">Address</label>
+                    <textarea name="address" id="address" class="input" rows="3"></textarea>
+                    <error-output class="address-error" for="address"></error-output>
+                </div>
+                <div class="select-items">
+                    <div class="row-content">
+                        <label class="label text" for="state">State</label>
+                        <select id="state" class="input" onchange="makeCitySubmenu(this.value)" required>
+                            <option value="" disabled selected>Choose State</option>
+                            <option>Gujarat</option>
+                            <option>Maharashtra</option>
+                            <option>Rajasthan</option>
+                            <option>Karnataka</option>
+                            <option>Delhi</option>
+                        </select>
+                    </div>
+                    <div class="row-content">
+                        <label class="label text" for="city">City</label>
+                        <select id="city" class="input" required>
+                            <option value="" disabled selected>Choose City</option>
+                        </select>
+                    </div>
+                    <div class="row-content">
+                        <label class="label text" for="zip">Zip</label>
+                        <input type="text" class="input" id="zip" name="zip" required>
+                        <error-output class="zip-error" for="zip"></error-output>
+                    </div>
+                </div>
+                <div class="submit-reset">
+                    <button type="submit" class="button submitButton" id="submitButton">Add</button>
+                    <button type="reset" class="button resetButton">Reset</button>
+                </div>
+            </form>
+        </div>
+        <script src="../js/handleSelect.js"></script>
+        <script src="../js/validation.js"></script>
+        <script src="../js/site_properties.js"></script>
+        <script src="../js/AddressBook.js"></script>
+        <script src="../js/AddressBookObject.js"></script>
+    </body>
+</html>
