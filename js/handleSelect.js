@@ -3,7 +3,8 @@ var citiesByState = {
     Maharashtra: ["Choose City", "Mumbai", "Pune", "Nagpur", "Nashik"],
     Rajasthan: ["Choose City","Jaipur", "Udaipur", "Bikaner", "Kota"],
     Karnataka: ["Choose City","Banglore", "Hubli", "Mysore"],
-    Delhi: ["South Delhi","West Delhi","North Delhi","East Delhi"]
+    Delhi: ["South Delhi","West Delhi","North Delhi","East Delhi"],
+    Anonymous :["anonymous"]
 }
 function makeCitySubmenu(value) {
     if (value.length == 0) document.getElementById("city").innerHTML = "<option></option>";
